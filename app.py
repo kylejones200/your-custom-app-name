@@ -33,6 +33,7 @@ from mlxtend.classifier import StackingClassifier
 from sklearn import metrics
 from sklearn.metrics import accuracy_score, mean_squared_error, precision_recall_curve
 from sklearn.model_selection import cross_val_score
+import joblib
 
 # for db connection
 import sqlite3
@@ -72,7 +73,7 @@ def predict():
 	f.close()
 	all_cols=X_test
 	input_df=pd.DataFrame(msg_data,columns=all_cols,index=[0])
-	model = pickle.load(open(model_filename, "rb"))
+	model = joblib.load(model_filename)
 	arr_results = model.predict(input_df)
 	treatment_likelihood=""
 	if arr_results[0]==0:
