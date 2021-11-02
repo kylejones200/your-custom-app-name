@@ -25,12 +25,12 @@
         padding: 5px;
       }
       .Yes {
-        color: #3c763d;
+        color: #a94442;
         background-color: #dff0d8;
         border-color: #d6e9c6;
       }
       .No {
-        color: #a94442;
+        color: #3c763d;
         background-color: #f2dede;
         border-color: #ebccd1;
       }
@@ -42,34 +42,33 @@
   <body>
       <form id="predict" method="POST">
         <p>Q1. Has the customer had the account more than 100 months?</p>
-        <label><input type="radio" name="account_length" value="1" checked>Yes</label>
+        <label><input type="radio" name="account_length" value="1" >Yes</label>
         <label><input type="radio" name="account_length" value="0">No</label>
         <hr>
         <p>Q2. Does the customer have an international plan?</p>
-        <label><input type="radio" name="international_plan" value="1" checked>Yes</label>
+        <label><input type="radio" name="international_plan" value="1" >Yes</label>
         <label><input type="radio" name="international_plan" value="0">No</label>
         <hr>
         <p>Q3. Does the customer have a voicemail plan?</p>
-        <label><input type="radio" name="voice_mail_plan" value="1" checked>Yes</label>
+        <label><input type="radio" name="voice_mail_plan" value="1" >Yes</label>
         <label><input type="radio" name="voice_mail_plan" value="0">No</label>
         <hr>
         <p>Q4. Does the customer receive more than 8 voicemail messages per month?</p>
-        <label><input type="radio" name="number_vmail_messages" value="1" checked>Yes</label>
+        <label><input type="radio" name="number_vmail_messages" value="1" >Yes</label>
         <label><input type="radio" name="number_vmail_messages" value="0">No</label>
         <hr>
         <p>Q5. Does the customer average more than 100 daytime calls total per month?</p>
-        <label><input type="radio" name="total_day_calls" value="1" checked>Yes</label>
+        <label><input type="radio" name="total_day_calls" value="1" >Yes</label>
         <label><input type="radio" name="total_day_calls" value="0">No</label>
         <hr>
         <p>Q6. Does the customer average more than 100 evening calls total per month?</p>
-        <label><input type="radio" name="total_eve_calls" value="1" checked>Yes</label>
+        <label><input type="radio" name="total_eve_calls" value="1" >Yes</label>
         <label><input type="radio" name="total_eve_calls" value="0">No</label>
         <hr>
         <p>Q7. Has the customer called custome service more than 1.5 times per month on average?</p>
-        <label><input type="radio" name="number_customer_service_calls" value="1" checked>Yes</label>
+        <label><input type="radio" name="number_customer_service_calls" value="1" >Yes</label>
         <label><input type="radio" name="number_customer_service_calls" value="0">No</label>
         <hr>
-
         <input type="submit" value="Predict!">
     </form>
 
@@ -98,7 +97,7 @@
                 if(predictedResult=="Yes") {
                   htmlStr+="<div class='Yes'><b>Yes, </b> the customer is likely to churn.</div>";
                 } else if(predictedResult=="No") {
-                  htmlStr+="<div class='No'><b>No, </b> the customer is not likelt to churn.</div>";
+                  htmlStr+="<div class='No'><b>No, </b> the customer is not likely to churn.</div>";
                 }
                 $("#predictionOutcome").html(htmlStr);
             },

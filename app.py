@@ -9,38 +9,11 @@ import json
 import numpy as np 
 import pandas as pd
 
-# for statistics output
-from scipy import stats
-from scipy.stats import randint
-
-# for data preparation and preprocessing for model
-from sklearn.model_selection import train_test_split
-from sklearn import preprocessing
-from sklearn.datasets import make_classification
-from sklearn.preprocessing import binarize, LabelEncoder, MinMaxScaler
-
 # models
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
-from sklearn.model_selection import RandomizedSearchCV
-from sklearn.ensemble import BaggingClassifier, AdaBoostClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.naive_bayes import GaussianNB 
-from mlxtend.classifier import StackingClassifier
-
-# model evaluation and validation 
-from sklearn import metrics
-from sklearn.metrics import accuracy_score, mean_squared_error, precision_recall_curve
-from sklearn.model_selection import cross_val_score
-import joblib
-
-# for db connection
-import sqlite3
-db_filename="database.db"
+from sklearn.ensemble import RandomForestClassifier
 
 # for saving/loading the ML model
-import pickle
+import joblib
 model_filename="models/model.pkl"
 
 # to bypass warnings in the jupyter notebook
