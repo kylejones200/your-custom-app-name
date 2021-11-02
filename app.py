@@ -20,20 +20,13 @@ from sklearn.datasets import make_classification
 from sklearn.preprocessing import binarize, LabelEncoder, MinMaxScaler
 
 # models
-# Logistic Regression
 from sklearn.linear_model import LogisticRegression
-# Tree Classifier
 from sklearn.tree import DecisionTreeClassifier
-# Random Forest
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
 from sklearn.model_selection import RandomizedSearchCV
-# Bagging
 from sklearn.ensemble import BaggingClassifier, AdaBoostClassifier
-# KNN
 from sklearn.neighbors import KNeighborsClassifier
-# Naive Bayes
 from sklearn.naive_bayes import GaussianNB 
-# Stacking
 from mlxtend.classifier import StackingClassifier
 
 # model evaluation and validation 
